@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minigame</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="setting">
+            <div class="score">
+                <h1>Score :</h1>
+                <h1 id="score">0</h1>
+            </div>
+            <div class="life">
+                <div class="heart"><i class="fas fa-heart"></i></div>
+                <div class="heart"><i class="fas fa-heart"></i></div>
+                <div class="heart"><i class="fas fa-heart"></i></div>
+            </div>
+        </div>
+
+        <div class="notif">
+            <h1 id="level">Level 1</h1>
+            <button id="restart" onclick="restartGame()">Restart Game</button>
+            <button id="start" onclick="restartGame()">Start Game</button>
+        </div>
+
+        <audio id="gameoverSound" src="audio/gameover.wav" hidden></audio>
+        <audio id="levelupSound" src="audio/levelup.wav" hidden></audio>
+
+        <div class="bubbles">
+            <div class="box" data-score="10"></div>
+            <div class="box" data-score="10"></div>
+            <div class="box" data-score="10"></div>
+            <div class="box" data-score="10"></div>
+            <div class="box" data-score="10"></div>
+            <div class="box" data-score="10"></div>
+            <div class="box" data-score="10"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
