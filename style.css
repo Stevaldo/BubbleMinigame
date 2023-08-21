@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(1, 1, 1);
+}
+
+.setting {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between; /* To push score to the left and life to the right */
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0; /* Position at the top-left corner */
+    width: 100%; /* Occupy the full width of the container */
+    background-color:white; /* Add a semi-transparent background for visibility */
+    padding: 5px 10px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in width and height calculations */
+  }
+  
+.score,.life{
+    display: flex;
+    margin :0;
+    color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+.heart i{
+    font-size: 24px;
+    margin-left: 5px;
+    color: red;
+}
+
+.bubbles{
+    width: 100%;
+    display: flex;
+    bottom: -150px;
+    justify-content:space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.bubbles .box{
+    width: 100px;
+    height: 100px;
+    margin : 50px;
+    border: 20px;
+    border-radius: 100px;
+    background-color: rgb(255, 255, 255);
+    transition: opacity 0.5s;
+}
+
+@media (max-width: 768px) {
+    .bubbles .box {
+        width: 70px;
+        height: 70px;
+        margin: 5px;
+    }
+}
+
+@keyframes bubbles{
+    0%{
+        transform: translateY(0);
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-90vh);
+        opacity: 0;
+    }
+}
+
+.bubbles .box:nth-child(1){
+    animation-delay: 1s;
+}
+.bubbles .box:nth-child(2){
+    animation-delay: 7s;
+}
+.bubbles .box:nth-child(3){
+    animation-delay: 5s;
+}
+.bubbles .box:nth-child(4){
+    animation-delay: 3s;
+}
+.bubbles .box:nth-child(5){
+    animation-delay: 4s;
+}
+.bubbles .box:nth-child(6){
+    animation-delay: 2s;
+}
+.bubbles .box:nth-child(7){
+    animation-delay: 6s;
+}
+
+.notif {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.notif h1 {
+    font-size: 36px;
+    margin: 10px 0;
+    opacity: 0;
+}
+
+@keyframes showLevel{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity : 0;
+    }
+}
+
+.notif button {
+    font-size: 20px; 
+    background-color: #ff0000; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.notif #restart{
+    display: none;
+}
+
+
