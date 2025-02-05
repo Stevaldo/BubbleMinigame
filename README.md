@@ -2,6 +2,8 @@
 
 A fun and addictive bubble clicking game where you score points by clicking bubbles before they float away!
 
+![Bubble Minigame Screenshot](image.png)
+
 ## Table of Contents
 
 - [Game Overview](#game-overview)
